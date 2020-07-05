@@ -19,19 +19,19 @@ const decideScene = (bitrate, minimum) => {
     }
 
     if (nextScene !== activeScene) {
-        activeScene = nextScene;
         if (runs === config.delayInSeconds) {
-
             const sceneName = config.obs.scenes[activeScene];
             obs.sendCallback('SetCurrentScene', {'scene-name': sceneName}, (err, data) => {
                 data.status === 'ok' && console.log('Scene was changed', sceneName);
             });
+            
+            activeScene = nextScene;
             runs = 0;
         }
 
         runs++;
 
-        console.log('Upcoming change backhold for ' + runs + ' second(s)');
+        console.log('Upcoming change to ' + nextScene + ' backhold for ' + runs + '/' + config.delayInSeconds + ' second(s)');
         return;
     }
 
