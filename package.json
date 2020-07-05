@@ -1,0 +1,9 @@
+{
+  "name": "obs-nginx-rtmp-scene-switch",
+  "version": "1.0.0",
+  "dependencies": {
+    "node-fetch": "^2.6.0",
+    "obs-websocket-js": "^4.0.1",
+    "xml2js": "^0.4.23"
+  }
+}

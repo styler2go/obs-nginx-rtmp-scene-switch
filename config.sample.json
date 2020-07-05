@@ -1,0 +1,19 @@
+{
+  "nginx": {
+    "url": "http://192.168.178.5:88/stat/",
+    "application": "cam",
+    "stream": "test"
+  },
+  "minBandwidth": 3000,
+  "delayInSeconds": 10,
+  "obs": {
+    "socket": {
+      "url": "localhost:4444",
+      "password": ""
+    },
+    "scenes": {
+      "good": "[your cam scene name]",
+      "bad": "[your bad signal scene name]"
+    }
+  }
+}
